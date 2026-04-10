@@ -1,0 +1,13 @@
+{
+  "name": "todo-app",
+  "private": true,
+  "description": "Monorepo: frontend (Vite) + backend (FastAPI). Run npm run dev from repo root to start both.",
+  "scripts": {
+    "dev": "concurrently -k -n frontend,backend -c cyan,magenta \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "npm run dev --prefix frontend",
+    "dev:backend": "node scripts/dev-backend.cjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

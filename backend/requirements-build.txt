@@ -1,0 +1,3 @@
+# Optional: Windows .exe build (install on the machine that runs PyInstaller).
+-r requirements.txt
+pyinstaller>=6.0.0

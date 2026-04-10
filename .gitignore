@@ -1,0 +1,33 @@
+# Root + monorepo: keep venv, caches, and local data out of git
+
+# Python (backend)
+backend/venv/
+backend/.venv/
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+*.egg
+
+# Local env & secrets (never commit)
+.env
+.env.local
+.env.*.local
+
+# SQLite default dev DB (see backend/app/database.py)
+backend/data/*.db
+
+# Node (root: concurrently, etc.)
+node_modules/
+
+# OS / editors
+.DS_Store
+Thumbs.db
+.idea/
+
+# Test / coverage (if added later)
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
